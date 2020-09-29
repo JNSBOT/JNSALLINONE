@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Turbo Renamer 
+# (c) Ns_AnoNymouS 
 
 # the logging things
 import logging
@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 import os
 import time
-
+import random
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
@@ -23,7 +23,7 @@ from translation import Translation
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import Client, Filters
-
+from helper_funcs.help_Nekmo_ffmpeg import take_screen_shot
 from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram
 
@@ -45,10 +45,10 @@ async def rename_video(bot, update):
     TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
-        if len(file_name) > 128:
+        if len(file_name) > 64:
             await update.reply_text(
                 Translation.IFLONG_FILE_NAME.format(
-                    alimit="128",
+                    alimit="64",
                     num=len(file_name)
                 )
             )
@@ -88,10 +88,18 @@ async def rename_video(bot, update):
                 message_id=b.message_id
                 )
             logger.info(the_real_download_location)
+            width = 0
+            height = 0
+            duration = 0
+            metadata = extractMetadata(createParser(new_file_name))
+            if metadata.has("duration"):
+                duration = metadata.get('duration').seconds
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
             if not os.path.exists(thumb_image_path):
-                thumb_image_path = None
+                    thumb_image_path = await take_screen_shot(new_file_name, os.path.dirname(new_file_name), random.randint(0, duration - 1))
             else:
+                width = 0
+                height = 0
                 metadata = extractMetadata(createParser(thumb_image_path))
                 if metadata.has("width"):
                     width = metadata.get("width")
@@ -104,17 +112,17 @@ async def rename_video(bot, update):
                 img = Image.open(thumb_image_path)
                 # https://stackoverflow.com/a/37631799/4723940
                 # img.thumbnail((90, 90))
-                img.resize((90, height))
+                img.resize((320, height))
                 img.save(thumb_image_path, "JPEG")
                 # https://pillow.readthedocs.io/en/3.1.x/reference/Image.html#create-thumbnails
             c_time = time.time()
             await bot.send_video(
                 chat_id=update.chat.id,
                 video=new_file_name,
-                caption=f"<b>{file_name} \n\nShare and Support\n\n@SerialCoIn</b>",
-                supports_streaming=True,
-                # reply_markup=reply_markup,
+                duration=duration,
                 thumb=thumb_image_path,
+                caption=description,
+                # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
