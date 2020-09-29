@@ -121,7 +121,7 @@ async def rename_video(bot, update):
                 video=new_file_name,
                 duration=duration,
                 thumb=thumb_image_path,
-                caption=description,
+                caption=f"<b>{file_name} \n\nShare and Support\n\n@SerialCoIn</b>",
                 # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
