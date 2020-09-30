@@ -61,10 +61,10 @@ Please short your file name and try again!"""
 
 **🧰 Framework:** Pyrogram
 
-**👨‍💻 Developer:** [Turbo Renamer](https://t.me/SerialCoIn)
+**👨‍💻 Developer:** [Turbo Renamer](https://t.me/Ns_AnoNymouS)
 
 📮 Channel: [Serial](https://t.me/SerialCoIn)
 
 **👥 Group:** [Tamil Serial Group](https://t.me/SerialCoIng)
 
-**💻 Source Code:**[Press Me](https://www.youtube.com)"""
+**💻 Source Code:**[Press Me](https://github.com/AsuranJ/Turbo-Renamer)"""
