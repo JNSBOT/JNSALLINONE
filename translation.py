@@ -35,7 +35,7 @@ I am Turbo Renamer bot ✍ by <a href='https://t.me/JAsuran123'><b>Asuran</b></a
 
 3. Reply to that message with <code>/rename new name.extension</code>. with custom thumbnail support.\n(upload as file)
 
-4. Reply to that message with <code>/rename_vidoe new name.extension</code>. with custom thumbnail support.\n(uploading as Video)
+4. Reply to that message with <code>/renamev new name.extension</code>. with custom thumbnail support.\n(uploading as Video)
 
    
 <b>Thanks to <i><a href="https://t.me/JAsuran123">Turbo Renamer 🙇</a></i> for his source code. check /about for source code</b>
