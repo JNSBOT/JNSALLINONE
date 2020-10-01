@@ -15,7 +15,7 @@
 ```
 start - to check whether bot is alive 
 rename - (long press) and send the name of the new file.extension for uploading as file
-rename_video - (long press) and send the name of the new file.extension for upload as video
+renamev - (long press) and send the name of the new file.extension for upload as video
 donate - please donate me
 help - to know how to use me
 about - to know about me
