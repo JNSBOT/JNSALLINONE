@@ -1,5 +1,5 @@
 class Translation(object):
-    START_TEXT = """Vanakkam <i><b>{}</b></i>,
+    START_TEXT = """<i>Vanakkam</i> <i><b>{}</b></i>,
 
 Welcome to Our <a href='https://t.me/turboremaxbot'><b>Turbo Renamer ⚡</b></a> bot
 
