@@ -87,7 +87,14 @@ async def convert_to_audio(bot, update):
                 duration = metadata.get('duration').seconds
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
             if not os.path.exists(thumb_image_path):
-                thumb_image_path = None
+                thumb_image_path = await take_screen_shot(
+                    the_real_download_location,
+                    os.path.dirname(the_real_download_location),
+                    random.randint(
+                        0,
+                        duration - 1
+                    )
+                )
             else:
                 metadata = extractMetadata(createParser(thumb_image_path))
                 if metadata.has("width"):
