@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Ns_AnoNymouS 
+# (c) Jega Turbo
 
 # the logging things
 import logging
@@ -45,10 +45,10 @@ async def rename_video(bot, update):
     TRChatBase(update.from_user.id, update.text, "rename_video")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
-        if len(file_name) > 64:
+        if len(file_name) > 128:
             await update.reply_text(
                 Translation.IFLONG_FILE_NAME.format(
-                    alimit="64",
+                    alimit="128",
                     num=len(file_name)
                 )
             )
