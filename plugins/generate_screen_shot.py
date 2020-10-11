@@ -72,7 +72,7 @@ async def generate_screen_shot(bot, update):
                 False,
                 Config.DEF_WATER_MARK_FILE,
                 5,
-                12
+                9
             )
             logger.info(images)
             await bot.edit_message_text(
@@ -83,7 +83,7 @@ async def generate_screen_shot(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption="<b>Share and Support\n\n@SerialCoIn</b>"
+                caption="<b>Share and Support\n@SerialCoIn</b>"
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
