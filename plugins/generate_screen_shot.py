@@ -83,14 +83,14 @@ async def generate_screen_shot(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption="caption"
+                caption="<b>Share and Support\n\n@SerialCoIn</b>"
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
                             media_album_p.append(
                                 pyrogram.InputMediaPhoto(
                                     media=image,
-                                    caption="<b>Share and Support\n\n@SerialCoIn</b>",
+                                    caption=caption,
                                     parse_mode="html"
                                 )
                             )
