@@ -72,7 +72,7 @@ async def generate_screen_shot(bot, update):
                 False,
                 Config.DEF_WATER_MARK_FILE,
                 5,
-                9
+                12
             )
             logger.info(images)
             await bot.edit_message_text(
@@ -83,14 +83,14 @@ async def generate_screen_shot(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption=f"<b>{file_name} \n\nShare and Support\n\n@SerialCoIn</b>"
+                caption="caption
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
                             media_album_p.append(
                                 pyrogram.InputMediaPhoto(
                                     media=image,
-                                    caption=caption,
+                                    caption="<b>Share and Support\n\n@SerialCoIn</b>",
                                     parse_mode="html"
                                 )
                             )
