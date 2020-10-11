@@ -24,6 +24,7 @@ Type /help for more details."""
     SAVED_RECVD_DOC_FILE = "👹 Document Downloaded Successfully."
     CUSTOM_CAPTION_UL_FILE = "<b>\nShare and Support \n\n@SerialCoIn</b>"
     NO_CUSTOM_THUMB_NAIL_FOUND = "😠 No Custom ThumbNail found."
+    NO_VOID_FORMAT_FOUND = "ERROR...\n<b>YouTubeDL</b> said: {}"
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
     HELP_USER = """Vanakkam <b><i>{}</i></b>, 
 
