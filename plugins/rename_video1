@@ -31,24 +31,34 @@ from hachoir.parser import createParser
 from PIL import Image
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["c2v"]))
-async def convert_to_video(bot, update):
+@pyrogram.Client.on_message(pyrogram.Filters.command(["rename_video1"]))
+async def rename_video(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
-        await bot.send_message(
+        await bot.delete_messages(
             chat_id=update.chat.id,
-            text=Translation.BANNED_USER_TEXT,
-            reply_to_message_id=update.message_id
+            message_ids=update.message_id,
+            revoke=True
         )
         return
-    TRChatBase(update.from_user.id, update.text, "c2v")
-    if update.reply_to_message is not None:
+    TRChatBase(update.from_user.id, update.text, "rename_video1")
+    if (" " in update.text) and (update.reply_to_message is not None):
+        cmd, file_name = update.text.split(" ", 1)
+        if len(file_name) > 128:
+            await update.reply_text(
+                Translation.IFLONG_FILE_NAME.format(
+                    alimit="128",
+                    num=len(file_name)
+                )
+            )
+            return
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
-        a = await bot.send_message(
+        b = await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.DOWNLOAD_START,
             reply_to_message_id=update.message_id
         )
+        
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
