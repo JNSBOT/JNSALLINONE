@@ -94,7 +94,9 @@ async def rename_video(bot, update):
             duration = 0
             metadata = extractMetadata(createParser(new_file_name))
             if metadata.has("duration"):
-                duration = metadata.get('duration').seconds
+                print(path)
+                print("  Duration (hh:mm:ss.f): %s" % metadata.get('duration'))
+                #duration = metadata.get('duration').seconds
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
             if not os.path.exists(thumb_image_path):
                 thumb_image_path = await take_screen_shot(
