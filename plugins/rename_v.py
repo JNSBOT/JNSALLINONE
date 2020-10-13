@@ -59,7 +59,6 @@ async def rename_video(bot, update):
             text=Translation.DOWNLOAD_START,
             reply_to_message_id=update.message_id
         )
-        
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
@@ -72,23 +71,21 @@ async def rename_video(bot, update):
             )
         )
         if the_real_download_location is not None:
-          try:
-           new_file_name = download_location + file_name
-           os.rename(the_real_download_location, new_file_name)
-           await bot.edit_message_text(
-             text=Translation.SAVED_RECVD_DOC_FILE,
-             chat_id=update.chat.id,
-             message_id=a.message_id
+           try:
+             #await bot.edit_message_text(
+                 #text=Translation.SAVED_RECVD_DOC_FILE,
+                 #chat_id=update.chat.id,
+                 #message_id=a.message_id
              )
-          #  except:
-           #    pass
-           # new_file_name = download_location + file_name
-         #   os.rename(the_real_download_location, new_file_name)
-         #   await bot.edit_message_text(
-            #    text=Translation.UPLOAD_START,
-           #     chat_id=update.chat.id,
-           #     message_id=a.message_id
-            #    )
+          except:
+             pass
+          new_file_name = download_location + file_name
+          os.rename(the_real_download_location, new_file_name)
+          await bot.edit_message_text(
+              text=Translation.UPLOAD_START,
+              chat_id=update.chat.id,
+              message_id=a.message_id
+              )
             # don't care about the extension
            # await bot.edit_message_text(
               #  text=Translation.UPLOAD_START,
