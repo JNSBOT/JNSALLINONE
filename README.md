@@ -13,12 +13,19 @@
 
 ## Available BotFather commands
 ```
-start - to check whether bot is alive 
+start - to check whether bot is alive
 rename - (long press) and send the name of the new file.extension for uploading as file
-renamev - (long press) and send the name of the new file.extension for upload as video
-donate - please donate me
+rename_video - (long press) and send the name of the new file.extension for upload as video Thumbnail must add before use
+rename_video1 - (long press) and send the name of the new file.extension for upload as video
+c2v - Convert to Video
+deletethumbnail - Delete Thumbnail
+gshoot - Generate Screenshots
+downloadmedia - Download media for trim then
+trim - HH:MM:SS for Trim
+unzip - Currently not Working
+upgrade - upgrade plans😂
 help - to know how to use me
-about - to know about me
+about - Info
 ```
 
 #### The Hard Way
