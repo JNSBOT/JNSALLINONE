@@ -102,7 +102,7 @@ async def rename_video(bot, update):
                try:
                     thumb_image_path = await take_screen_shot(new_file_name, os.path.dirname(new_file_name), random.randint(0, duration - 1))
                except:
-                    thumb_image_path = None
+                    thumb_image_path = await take_screen_shot(new_file_name, os.path.dirname(new_file_name), 0)
             else:
                 width = 0
                 height = 0
