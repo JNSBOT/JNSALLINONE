@@ -20,6 +20,7 @@ else:
 
 # the Strings used for this "thing"
 from translation import Translation
+from translation1 import Translation1
 
 
 async def progress_for_pyrogram(
