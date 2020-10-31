@@ -23,7 +23,7 @@ else:
     from config import Config
 
 # the Strings used for this "thing"
-from translation import Translation1
+from translation1 import Translation1
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
@@ -102,7 +102,7 @@ async def youtube_dl_call_back(bot, update):
         chat_id=update.message.chat.id,
         message_id=update.message.message_id
     )
-    #description = Translation1.CUSTOM_CAPTION_UL_FILE
+    description = Translation1.CUSTOM_CAPTION_UL_FILE
     if "fulltitle" in response_json:
         description = response_json["fulltitle"][0:1021]
         # escape Markdown and special characters
@@ -189,7 +189,7 @@ async def youtube_dl_call_back(bot, update):
         if file_size > Config.TG_MAX_FILE_SIZE:
             await bot.edit_message_text(
                 chat_id=update.message.chat.id,
-                text=Translation.RCHD_TG_API_LIMIT.format(time_taken_for_download, humanbytes(file_size)),
+                text=Translation1.RCHD_TG_API_LIMIT.format(time_taken_for_download, humanbytes(file_size)),
                 message_id=update.message.message_id
             )
         else:
