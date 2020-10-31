@@ -22,7 +22,7 @@ else:
     from config import Config
 
 # the Strings used for this "thing"
-from translation import Translation
+from translation1 import Translation
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
@@ -68,7 +68,7 @@ async def button(bot, update):
                 pass
             await bot.edit_message_text(
                 chat_id=update.message.chat.id,
-                text=Translation.CANCEL_STR,
+                text=Translation1.CANCEL_STR,
                 message_id=update.message.message_id
             )
         elif index_extractor == "ALL":
@@ -85,7 +85,7 @@ async def button(bot, update):
                     reply_to_message_id=update.message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        Translation.UPLOAD_START,
+                        Translation.1UPLOAD_START,
                         update.message,
                         start_time
                     )
@@ -98,7 +98,7 @@ async def button(bot, update):
                 pass
             await bot.edit_message_text(
                 chat_id=update.message.chat.id,
-                text=Translation.ZIP_UPLOADED_STR.format(i, "0"),
+                text=Translation1.ZIP_UPLOADED_STR.format(i, "0"),
                 message_id=update.message.message_id
             )
         else:
@@ -114,7 +114,7 @@ async def button(bot, update):
                 reply_to_message_id=update.message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
-                    Translation.UPLOAD_START,
+                    Translation1.UPLOAD_START,
                     update.message,
                     start_time
                 )
@@ -125,7 +125,7 @@ async def button(bot, update):
                 pass
             await bot.edit_message_text(
                 chat_id=update.message.chat.id,
-                text=Translation.ZIP_UPLOADED_STR.format("1", "0"),
+                text=Translation1.ZIP_UPLOADED_STR.format("1", "0"),
                 message_id=update.message.message_id
             )
     elif "|" in cb_data:
