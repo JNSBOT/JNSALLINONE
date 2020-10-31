@@ -18,6 +18,7 @@ else:
 
 # the Strings used for this "thing"
 from translation import Translation
+from translation1 import Translation1
 
 from pyrogram import Client, Filters
 
