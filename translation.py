@@ -1,4 +1,4 @@
-class Translation(object):
+class Translation1(object):
    START_TEXT = """<i>Vanakkam</i> <i><b>{}</b></i>,
 
 Welcome to Our <a href='https://t.me/turboremaxbot'><b>Turbo Renamer ⚡</b></a> bot
@@ -30,7 +30,14 @@ NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
 NO_VOID_FORMAT_FOUND = "ERROR...\n<b>YouTubeDL</b> said: {}"
 USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
 
+class Translation(object):
+   START_TEXT = """<i>Vanakkam</i> <i><b>{}</b></i>,
 
+Welcome to Our <a href='https://t.me/turboremaxbot'><b>Turbo Renamer ⚡</b></a> bot
+
+I Can rename ✍ with custom thumbnail and upload as video/file
+
+Type /help for more details."""
 RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
 ABS_TEXT = " Please don't be selfish."
 UPGRADE_TEXT = "There is no upgrade plan till now it will be added in future"
