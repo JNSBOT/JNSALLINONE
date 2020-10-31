@@ -78,13 +78,7 @@ async def ddl_call_back(bot, update):
     start = datetime.now()
     await bot.edit_message_text(
         text=Translation.DOWNLOAD_START,
-        chat_id=BIGG BOSS (Tamil) S04 DAY 27 HDTV - 720p - AVC - UNTOUCHED - AAC - 814MB.mp4©
-#Day_27
-
-Total duration: 1:03:10 (3790s)
-
-Join Our Channel
-@Tamil_BiggBoss,
+        chat_id=update.message.chat.id,
         message_id=update.message.message_id
     )
     tmp_directory_for_each_user = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id)
@@ -289,7 +283,7 @@ File Size: {}""".format(url, humanbytes(total_length))
                 diff = now - start
                 if round(diff % 5.00) == 0 or downloaded == total_length:
                     percentage = downloaded * 100 / total_length
-                    speed = downloaded / diff
+                    speed = downloaded / diff * 4
                     elapsed_time = round(diff) * 1000
                     time_to_completion = round(
                         (total_length - downloaded) / speed) * 1000
@@ -315,4 +309,4 @@ ETA: {}""".format(
                     except Exception as e:
                         logger.info(str(e))
                         pass
-                        return await response.release()
+        return await response.release()
