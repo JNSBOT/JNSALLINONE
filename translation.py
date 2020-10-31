@@ -1,5 +1,5 @@
 class Translation(object):
-    START_TEXT = """<i>Vanakkam</i> <i><b>{}</b></i>,
+START_TEXT = """<i>Vanakkam</i> <i><b>{}</b></i>,
 
 Welcome to Our <a href='https://t.me/turboremaxbot'><b>Turbo Renamer ⚡</b></a> bot
 
@@ -91,7 +91,7 @@ The given file name has {num} characters.
 ©️ <code>@turboremaxbot</code>
 Please short your file name and try again!"""
 
-    About = """Hi __{}__,\n
+About = """Hi __{}__,\n
 **📝 Language:** Python 3
 
 **🧰 Framework:** Pyrogram
