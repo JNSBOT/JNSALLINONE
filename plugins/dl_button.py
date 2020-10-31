@@ -75,7 +75,6 @@ async def ddl_call_back(bot, update):
                 l = entity.length
                 youtube_dl_url = youtube_dl_url[o:o + l]
     description = Translation.CUSTOM_CAPTION_UL_FILE
-    download_location = Config.DOWNLOAD_LOCATION + "/"
     start = datetime.now()
     await bot.edit_message_text(
         text=Translation.DOWNLOAD_START,
@@ -134,20 +133,11 @@ async def ddl_call_back(bot, update):
             duration = 0
             if tg_send_type != "file":
                 metadata = extractMetadata(createParser(download_directory))
-                #if metadata is not None:
-                try:
+                if metadata is not None:
                     if metadata.has("duration"):
                         duration = metadata.get('duration').seconds
-                except:
-                  pass
-                thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
             # get the correct width, height, and duration for videos greater than 10MB
-            if not os.path.exists(thumb_image_path):
-               try:
-                    thumb_image_path = await take_screen_shot(download_directory, os.path.dirname(download_directory), random.randint(0, duration - 1))
-               except:
-                    thumb_image_path = None
-            else:
+            if os.path.exists(thumb_image_path):
                 width = 0
                 height = 0
                 metadata = extractMetadata(createParser(thumb_image_path))
