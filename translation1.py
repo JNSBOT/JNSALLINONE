@@ -29,6 +29,21 @@ SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
 NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
 NO_VOID_FORMAT_FOUND = "ERROR...\n<b>YouTubeDL</b> said: {}"
 USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
+HELP_USER = """Vanakkam <b><i>{}</i></b>, 
+
+I am Turbo Renamer bot ✍ by <a href='https://t.me/JAsuran123'><b>Asuran</b></a>
+    
+1. Send Me A Thumbnail.
+
+2. Send me the file to be Renamed.
+
+3. Reply to that message with <code>/rename new name.extension</code>. with custom thumbnail support.\n(upload as file)
+
+4. Reply to that message with <code>/renamev new name.extension</code>. with custom thumbnail support.\n(uploading as Video)
+
+5. Reply to that message with <code>/gshoot</code> Uploading as Screenshots
+   
+<b>Thanks to <i><a href="https://t.me/JAsuran123">Turbo Renamer 🙇</a></i> for his source code. check /about for source code</b>
 
 --------
 
