@@ -23,7 +23,7 @@ else:
     from config import Config
 
 # the Strings used for this "thing"
-from translation1 import Translation1
+from translation1 import Translation
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
@@ -102,7 +102,7 @@ async def youtube_dl_call_back(bot, update):
         chat_id=update.message.chat.id,
         message_id=update.message.message_id
     )
-    description = Translation1.CUSTOM_CAPTION_UL_FILE
+    description = Translation.CUSTOM_CAPTION_UL_FILE
     if "fulltitle" in response_json:
         description = response_json["fulltitle"][0:1021]
         # escape Markdown and special characters
@@ -189,7 +189,7 @@ async def youtube_dl_call_back(bot, update):
         if file_size > Config.TG_MAX_FILE_SIZE:
             await bot.edit_message_text(
                 chat_id=update.message.chat.id,
-                text=Translation1.RCHD_TG_API_LIMIT.format(time_taken_for_download, humanbytes(file_size)),
+                text=Translation.RCHD_TG_API_LIMIT.format(time_taken_for_download, humanbytes(file_size)),
                 message_id=update.message.message_id
             )
         else:
@@ -204,7 +204,7 @@ async def youtube_dl_call_back(bot, update):
             )
             logger.info(images)
             await bot.edit_message_text(
-                text=Translation1.UPLOAD_START,
+                text=Translation.UPLOAD_START,
                 chat_id=update.message.chat.id,
                 message_id=update.message.message_id
             )
@@ -261,7 +261,7 @@ async def youtube_dl_call_back(bot, update):
                     reply_to_message_id=update.message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        Translation1.UPLOAD_START,
+                        Translation.UPLOAD_START,
                         update.message,
                         start_time
                     )
@@ -277,7 +277,7 @@ async def youtube_dl_call_back(bot, update):
                     reply_to_message_id=update.message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        Translation1.UPLOAD_START,
+                        Translation.UPLOAD_START,
                         update.message,
                         start_time
                     )
@@ -292,7 +292,7 @@ async def youtube_dl_call_back(bot, update):
                     reply_to_message_id=update.message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        Translation1.UPLOAD_START,
+                        Translation.UPLOAD_START,
                         update.message,
                         start_time
                     )
@@ -312,7 +312,7 @@ async def youtube_dl_call_back(bot, update):
                     reply_to_message_id=update.message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        Translation1.UPLOAD_START,
+                        Translation.UPLOAD_START,
                         update.message,
                         start_time
                     )
@@ -358,7 +358,7 @@ async def youtube_dl_call_back(bot, update):
             except:
                 pass
             await bot.edit_message_text(
-                text=Translation1.AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS.format(time_taken_for_download, time_taken_for_upload),
+                text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS.format(time_taken_for_download, time_taken_for_upload),
                 chat_id=update.message.chat.id,
                 message_id=update.message.message_id,
                 disable_web_page_preview=True
