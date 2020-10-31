@@ -85,7 +85,7 @@ async def button(bot, update):
                     reply_to_message_id=update.message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        Translation.1UPLOAD_START,
+                        Translation1.UPLOAD_START,
                         update.message,
                         start_time
                     )
