@@ -140,7 +140,7 @@ async def ddl_call_back(bot, update):
                         duration = metadata.get('duration').seconds
                 except:
                   pass
-                    thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+                thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
             # get the correct width, height, and duration for videos greater than 10MB
             if not os.path.exists(thumb_image_path):
                try:
