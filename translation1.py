@@ -1,4 +1,4 @@
-class Translation1(object):
+class Translation(object):
    START_TEXT = """<i>Vanakkam</i> <i><b>{}</b></i>,
 
 Welcome to Our <a href='https://t.me/turboremaxbot'><b>Turbo Renamer ⚡</b></a> bot
