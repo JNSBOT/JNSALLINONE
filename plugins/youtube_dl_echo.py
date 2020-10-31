@@ -21,7 +21,7 @@ else:
     from config import Config
 
 # the Strings used for this "thing"
-from translation import Translation1
+from translation1 import Translation1
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
