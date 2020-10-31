@@ -6,6 +6,16 @@ Welcome to Our <a href='https://t.me/turboremaxbot'><b>Turbo Renamer ⚡</b></a>
 I Can rename ✍ with custom thumbnail and upload as video/file
 
 Type /help for more details."""
+RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
+    UPGRADE_TEXT = "<b>👉 Create own Clone Bot.. </b>  /help for Details"
+    FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
+    SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
+URL | filename | username | password"""
+    NOYES_URL = "@robot URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
+    RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
+    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.5GB due to Telegram API limitations."
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "Please rate me if you find me useful. Join : @SerialCoIn"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nJoin : @SerialCoIn \nUploaded in {} seconds."
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "There is no upgrade plan till now it will be added in future"
@@ -45,6 +55,8 @@ I am Turbo Renamer bot ✍ by <a href='https://t.me/JAsuran123'><b>Asuran</b></a
 --------
 
 Support Group : <b>@SerialCoIn</b>"""
+    AFTER_GET_DL_LINK = "Direct Link <a href='{}'>Generated</a> valid for {} days.\n© @SerialCoIn"
+    REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
     REPLY_TO_DOC_FOR_RENAME_FILE = "🙆 Reply to a Telegram media to `/rename New Name.extension` with custom thumbnail support.\n\n(For uploading as file).\n\nSee /help for mor information. "
     REPLY_TO_DOC_FOR_RENAME_VIDEO = "🙋 Reply to a Telegram media to `/rename_video New Name.extension` with custom thumbnail support.\n\n(For uploading as video).\n\nSee /help for mor information."
     REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
