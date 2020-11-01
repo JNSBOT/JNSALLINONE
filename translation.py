@@ -37,9 +37,11 @@ I am Renamer bot ✍ by <a href='https://t.me/JAsuran123'>Asuran 🐍</a>
 
 3. Reply to that message with <code>/rename new name.extension</code>. with custom thumbnail support.\n(upload as file)
 
-4. Reply to that message with <code>/rename_vidoe new name.extension</code>. with custom thumbnail support.\n(uploading as Video)
+4. Reply to that message with <code>/rename_video new name.extension</code>. with custom thumbnail support.\n(uploading as Video)
 
 5. Reply to that message with <code>/gshoot</code> U will get screenshots for replying file
+
+6. YouTube downloader Added
 
    
 <b>Thanks to <i><a href="https://t.me/JAsuran123">Asuran 🐍</a></i> for his source code. check /about for source code</b>
