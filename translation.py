@@ -29,7 +29,7 @@ Type /help for more details."""
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
     HELP_USER = """Hai <b><i>{}</i></b>, 
 
-I am Renamer bot ✍ by <a href='https://t.me/{}'>My Father 👨‍🏫</a>
+I am Renamer bot ✍ by <a href='https://t.me/JAsuran123'>Asuran 🐍</a>
     
 1. Send Me A Thumbnail.
 
@@ -39,14 +39,14 @@ I am Renamer bot ✍ by <a href='https://t.me/{}'>My Father 👨‍🏫</a>
 
 4. Reply to that message with <code>/rename_vidoe new name.extension</code>. with custom thumbnail support.\n(uploading as Video)
 
-5. Reply to that message with <code>/photo</code> U will get screenshots for replying file
+5. Reply to that message with <code>/gshoot</code> U will get screenshots for replying file
 
    
-<b>Thanks to <i><a href="https://t.me/Ns_AnoNymous">Anonymous 👨‍🏫</a></i> for his source code. check /about for source code</b>
+<b>Thanks to <i><a href="https://t.me/JAsuran123">Asuran 🐍</a></i> for his source code. check /about for source code</b>
 
 --------
 
-Support Group : @Ns_Bot_supporters"""
+Support Group : @SerialCoIng"""
     REPLY_TO_DOC_FOR_RENAME_FILE = "🙆 Reply to a Telegram media to `/rename New Name.extension` with custom thumbnail support.\n\n(For uploading as file).\n\nSee /help for mor information. "
     REPLY_TO_DOC_FOR_RENAME_VIDEO = "🙋 Reply to a Telegram media to `/rename_video New Name.extension` with custom thumbnail support.\n\n(For uploading as video).\n\nSee /help for mor information."
     REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
@@ -89,7 +89,7 @@ Please short your file name and try again!"""
 
 **🧰 Framework:** Pyrogram
 
-**👨‍💻 Developer:** [Turbo Renamer](https://t.me/Ns_AnoNymouS)
+**👨‍💻 Developer:** [Turbo Renamer](https://t.me/JAsuran123)
 
 📮 Channel: [Serial](https://t.me/SerialCoIn)
 
