@@ -35,7 +35,7 @@ async def generate_custom_thumbnail(bot, update):
         await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
-            revoke=False
+            revoke=True
         )
         return
     TRChatBase(update.from_user.id, update.text, "generatecustomthumbnail")
@@ -91,7 +91,7 @@ async def save_photo(bot, update):
         await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
-            revoke=True
+            revoke=False
         )
         return
     TRChatBase(update.from_user.id, update.text, "save_photo")
