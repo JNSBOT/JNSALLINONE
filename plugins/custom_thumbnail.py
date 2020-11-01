@@ -21,7 +21,7 @@ else:
 
 # the Strings used for this "thing"
 from translation import Translation
-from translation1 import Translation
+#from translation1 import Translation
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
@@ -91,7 +91,7 @@ async def save_photo(bot, update):
         await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
-            revoke=False
+            revoke=True
         )
         return
     TRChatBase(update.from_user.id, update.text, "save_photo")
