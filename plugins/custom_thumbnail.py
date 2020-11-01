@@ -20,7 +20,7 @@ else:
     from config import Config
 
 # the Strings used for this "thing"
-from translation import Translation
+#from translation import Translation
 #from translation1 import Translation
 
 import pyrogram
