@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Turbo Renamers 
+# (c) Turbo Renamer 
 
 # the logging things
 import logging
@@ -21,7 +21,6 @@ else:
 
 # the Strings used for this "thing"
 from translation import Translation
-#from translation1 import Translation
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
