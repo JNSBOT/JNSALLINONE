@@ -8,7 +8,4 @@ https://github.com/pyrogram/pyrogram/archive/asyncio.zip
 requests
 tgcrypto
 #YouTube-dl
-#git+git://github.com/AsuranJ/YouTube-dl/
-#git+git://github.com/AsuranJ/youtube-dl-2
-#git+git://github.com/AsuranJ/hansika
-git+git://github.com/AsuranJ/Asuran
+git+git://github.com/ytdl-org/youtube-dl
