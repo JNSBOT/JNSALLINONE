@@ -77,20 +77,20 @@ async def convert_to_file(bot, update):
             # ref: message from @BotSupport
             width = 0
             height = 0
-            duration = 0
-            metadata = extractMetadata(createParser(the_real_download_location))
-            if metadata.has("duration"):
-                duration = metadata.get('duration').seconds
-            thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
-            if not os.path.exists(thumb_image_path):
-                thumb_image_path = await take_screen_shot(
-                    the_real_download_location,
-                    os.path.dirname(the_real_download_location),
-                    random.randint(
-                        0,
-                        duration - 1
-                    )
-                )
+            #duration = 0
+           # metadata = extractMetadata(createParser(the_real_download_location))
+           # if metadata.has("duration"):
+               # duration = metadata.get('duration').seconds
+           # thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+           # if not os.path.exists(thumb_image_path):
+               # thumb_image_path = await take_screen_shot(
+                  #  the_real_download_location,
+                   # os.path.dirname(the_real_download_location),
+                  #  random.randint(
+                     #   0,
+                    #    duration - 1
+                  #  )
+               # )
             logger.info(thumb_image_path)
             # 'thumb_image_path' will be available now
             metadata = extractMetadata(createParser(thumb_image_path))
@@ -115,7 +115,7 @@ async def convert_to_file(bot, update):
                 chat_id=update.chat.id,
                 document=the_real_download_location,
                 caption=description,
-                duration=duration,
+              #  duration=duration,
                 width=width,
                 height=height,
                 supports_streaming=True,
