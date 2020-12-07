@@ -72,7 +72,12 @@ async def convert_to_file(bot, update):
              #   chat_id=update.chat.id,
             #    message_id=a.message_id
           #  )
+           # logger.info(the_real_download_location)
             logger.info(the_real_download_location)
+            thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+            if not os.path.exists(thumb_image_path):
+                thumb_image_path = None
+            else:
             # get the correct width, height, and duration for videos greater than 10MB
             # ref: message from @BotSupport
             width = 0
@@ -91,7 +96,7 @@ async def convert_to_file(bot, update):
                     #    duration - 1
                   #  )
                # )
-            logger.info(thumb_image_path)
+           # logger.info(thumb_image_path)
             # 'thumb_image_path' will be available now
             metadata = extractMetadata(createParser(thumb_image_path))
             if metadata.has("width"):
@@ -116,9 +121,9 @@ async def convert_to_file(bot, update):
                 document=the_real_download_location,
                 caption=description,
               #  duration=duration,
-                width=width,
-                height=height,
-                supports_streaming=True,
+                #width=width,
+               # height=height,
+               # supports_streaming=True,
                 # reply_markup=reply_markup,
                 thumb=thumb_image_path,
                 reply_to_message_id=update.reply_to_message.message_id,
