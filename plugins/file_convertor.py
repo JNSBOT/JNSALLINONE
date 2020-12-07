@@ -69,15 +69,15 @@ async def convert_to_document(bot, update):
                     chat_id=update.chat.id,
                     message_id=a.message_id
                 )
-            except:
-                pass
-            new_file_name = download_location + file_name
-            os.rename(the_real_download_location, new_file_name)
-            await bot.edit_message_text(
-                text=Translation.UPLOAD_START,
-                chat_id=update.chat.id,
-                message_id=a.message_id
-                )
+          #  except:
+              #  pass
+            #new_file_name = download_location + file_name
+          #  os.rename(the_real_download_location, new_file_name)
+          #  await bot.edit_message_text(
+             #   text=Translation.UPLOAD_START,
+           #     chat_id=update.chat.id,
+              #  message_id=a.message_id
+              #  )
             logger.info(the_real_download_location)
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
             if not os.path.exists(thumb_image_path):
