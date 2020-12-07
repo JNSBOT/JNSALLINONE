@@ -33,26 +33,17 @@ from hachoir.parser import createParser
 from PIL import Image
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
-async def rename_doc(bot, update):
+@pyrogram.Client.on_message(pyrogram.Filters.command(["c2v"]))
+async def convert_to_document(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
-        await bot.delete_messages(
+        await bot.send_message(
             chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
+            text=Translation.BANNED_USER_TEXT,
+            reply_to_message_id=update.message_id
         )
         return
-    TRChatBase(update.from_user.id, update.text, "rename")
-    if (" " in update.text) and (update.reply_to_message is not None):
-        cmd, file_name = update.text.split(" ", 1)
-        if len(file_name) > 128:
-            await update.reply_text(
-                Translation.IFLONG_FILE_NAME.format(
-                    alimit="128",
-                    num=len(file_name)
-                )
-            )
-            return
+    TRChatBase(update.from_user.id, update.text, "c2v")
+    if update.reply_to_message is not None:
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
         a = await bot.send_message(
