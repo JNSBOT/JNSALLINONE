@@ -82,7 +82,7 @@ async def convert_to_document(bot, update):
                 thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
                 if not os.path.exists(thumb_image_path):
                     thumb_image_path = None
-            else:
+         else:
                 width = 0
                 height = 0
                 metadata = extractMetadata(createParser(thumb_image_path))
