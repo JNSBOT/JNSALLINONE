@@ -78,10 +78,10 @@ async def convert_to_document(bot, update):
            #     chat_id=update.chat.id,
               #  message_id=a.message_id
               #  )
-            logger.info(the_real_download_location)
-            thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
-            if not os.path.exists(thumb_image_path):
-                thumb_image_path = None
+                logger.info(the_real_download_location)
+                thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+                if not os.path.exists(thumb_image_path):
+                    thumb_image_path = None
             else:
                 width = 0
                 height = 0
