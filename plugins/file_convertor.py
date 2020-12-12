@@ -52,7 +52,7 @@ async def convert_to_file(bot, update):
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
-            file_name=download_location,
+           # file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
                 Translation.DOWNLOAD_START,
@@ -67,15 +67,15 @@ async def convert_to_file(bot, update):
                     chat_id=update.chat.id,
                     message_id=a.message_id
                 )
-            except:
-                pass
-            new_file_name = download_location
-            os.rename(the_real_download_location, new_file_name)
-            await bot.edit_message_text(
-                text=Translation.UPLOAD_START,
-                chat_id=update.chat.id,
-                message_id=a.message_id
-                )
+         #   except:
+             #   pass
+           # new_file_name = download_location
+          #  os.rename(the_real_download_location, new_file_name)
+           # await bot.edit_message_text(
+               # text=Translation.UPLOAD_START,
+               # chat_id=update.chat.id,
+               # message_id=a.message_id
+              #  )
             logger.info(the_real_download_location)
             # get the correct width, height, and duration for videos greater than 10MB
             # ref: message from @BotSupport
@@ -117,7 +117,7 @@ async def convert_to_file(bot, update):
             c_time = time.time()
             await bot.send_document(
                 chat_id=update.chat.id,
-                document=new_file_name,
+                document=the_real_download_location,
                 thumb=thumb_image_path,
                 caption=description,
                 # reply_markup=reply_markup,
