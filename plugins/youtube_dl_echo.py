@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3g
 # -*- coding: utf-8 -*-
 # (c) Shrimadhav U K
 
