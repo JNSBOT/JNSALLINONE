@@ -200,7 +200,7 @@ async def youtube_dl_call_back(bot, update):
                 is_w_f,
                 Config.DEF_WATER_MARK_FILE,
                 300,
-                1
+                9
             )
             logger.info(images)
             await bot.edit_message_text(
@@ -325,9 +325,9 @@ async def youtube_dl_call_back(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption = "© @SerialCoIn"
+                caption = "© @Tamil_Bots"
                 if is_w_f:
-                    caption = "/upgrade to Plan D to remove the watermark\n© @SerialCoIn"
+                    caption = "/upgrade to Plan D to remove the watermark\n© @Tamil_Bots"
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
