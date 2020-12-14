@@ -18,9 +18,15 @@ import time
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 
-from tobrot import (
-    MAX_TG_SPLIT_FILE_SIZE
-)
+
+# the secret configuration specific things
+if bool(os.environ.get("WEBHOOK", False)):
+    from sample_config import Config
+else:
+    from config import Config
+
+# the Strings used for this "thing"
+from translation import Translation
 
 
 async def split_large_files(input_file):
