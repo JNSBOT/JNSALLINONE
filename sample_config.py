@@ -37,3 +37,27 @@ class Config(object):
     DEF_WATER_MARK_FILE = "Renamed by @turboremaxbot"
     # Sql Database url
     DB_URI = os.environ.get("DATABASE_URL", "")
+    #
+    ARIA_TWO_STARTED_PORT = int(os.environ.get("ARIA_TWO_STARTED_PORT", 6800))
+    EDIT_SLEEP_TIME_OUT = int(os.environ.get("EDIT_SLEEP_TIME_OUT", 15))
+    MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START = int(os.environ.get("MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START", 600))
+    MAX_TG_SPLIT_FILE_SIZE = int(os.environ.get("MAX_TG_SPLIT_FILE_SIZE", 2097152000))
+    # add config vars for the display progress
+    FINISHED_PROGRESS_STR = os.environ.get("FINISHED_PROGRESS_STR", "◾")
+    UN_FINISHED_PROGRESS_STR = os.environ.get("UN_FINISHED_PROGRESS_STR", "◽")
+    # add offensive API
+    TG_OFFENSIVE_API = os.environ.get("TG_OFFENSIVE_API", None)
+    CUSTOM_FILE_NAME = os.environ.get("CUSTOM_FILE_NAME", "")
+    LEECH_COMMAND = os.environ.get("LEECH_COMMAND", "leech@torrentl33ch3rbot")
+    YTDL_COMMAND = os.environ.get("YTDL_COMMAND", "ytdl@torrentl33ch3rbot")
+    RCLONE_CONFIG = os.environ.get("RCLONE_CONFIG", "")
+    DESTINATION_FOLDER = os.environ.get("DESTINATION_FOLDER", "TorrentLeech-Gdrive")
+    GLEECH_COMMAND = os.environ.get("GLEECH_COMMAND", "gleech@torrentl33ch3rbot")
+    INDEX_LINK = os.environ.get("INDEX_LINK", "")
+    TELEGRAM_LEECH_COMMAND_G = os.environ.get("TELEGRAM_LEECH_COMMAND_G", "tleech@torrentl33ch3rbot")
+    CANCEL_COMMAND_G = os.environ.get("CANCEL_COMMAND_G", "cancel@torrentl33ch3rbot")
+    GET_SIZE_G = os.environ.get("GET_SIZE_G", "getsize")
+    STATUS_COMMAND = os.environ.get("STATUS_COMMAND", "status@torrentl33ch3rbot")
+    SAVE_THUMBNAIL = os.environ.get("SAVE_THUMBNAIL", "savethumb@torrentl33ch3rbot")
+    CLEAR_THUMBNAIL = os.environ.get("CLEAR_THUMBNAIL", "clearthumb@torrentl33ch3rbot")
+
