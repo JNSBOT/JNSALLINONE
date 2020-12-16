@@ -1,5 +1,13 @@
 class Translation(object):
-    START_TEXT = """"""
+    START_TEXT = """Hello,
+This is a Telegram URL Upload Bot made by @SerialCoIn
+
+<b>Please send me any Direct download URL link, I can upload to telegram as File/Video</b>
+
+/help for more details..
+
+Support Group : @SerialCoIn
+© @SerialCoIn"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "<b>👉 Create own Clone Bot.. </b>  /help for Details"
@@ -10,7 +18,7 @@ URL | filename | username | password"""
     DOWNLOAD_START = "trying to download"
     UPLOAD_START = "trying to upload"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
-    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.95GB due to Telegram API limitations."
+    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.5GB due to Telegram API limitations."
     AFTER_SUCCESSFUL_UPLOAD_MSG = "Please rate me if you find me useful. Join : @SerialCoIn"
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nJoin : @SerialCoIn \nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
@@ -27,19 +35,12 @@ URL | filename | username | password"""
 --------
 Telegram ID: <code>{}</code>
 Plan name: Free User
-Expires on: 31/12/2030"""
-    HELP_USER = """Hai Turbo Renamer and Uploader Bot
+Expires on: 31/12/2020"""
+    HELP_USER = """Hai am URL Uploader bot..
     
-1.🔹 <b>Send me any Telegram File.</b> \n
-2.🔹 <b>Reply to that message with /rename New file name.extnsion</b> \n
-3.🔹 <b>Reply to that message with /rename_video New file name.extnsion</b> \n
-4.🔹 <b>Reply to that message with /gshoot  Get Screeshoots</b> \n
-5.🔹 <b> Send A Photo to make it as permanent Thumbnail</b> \n
-6.🔹 <b> I Can Also Convert Files Into Video through /c2v Command </b>   \n \n <b>Made With Love By: @SerialCoIn</b>
-7.🔹 <b> I Can Also Convert Files Into Audio through /c2a Command </b>   \n \n <b>Made With Love By: @SerialCoIn</b>
-8.🔹 Send url (Link|New Name with Extension).
-9.🔹 Send Custom Thumbnail (Optional).
-10.🔹 Select the button.
+1. Send url (Link|New Name with Extension).
+2. Send Custom Thumbnail (Optional).
+3. Select the button.
    SVideo - Give File as video with Screenshots
    DFile  - Give File with Screenshots
    Video  - Give File as video without Screenshots
@@ -50,11 +51,11 @@ Expires on: 31/12/2030"""
 --------
 Send /me to know current plan details
 
-Support Group : @SerialCoIng"""
+Support Group : @SerialCoIng
+© @SerialCoIng"""
     REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
     REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert"
     REPLY_TO_DOC_FOR_SCSS = "Reply to a Telegram media to get screenshots"
-    MAX_TG_SPLIT_FILE_SIZE = "Split Files"
     REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to /rename with custom thumbnail support"
     AFTER_GET_DL_LINK = "Direct Link <a href='{}'>Generated</a> valid for {} days.\n© @AnyDLBot"
     FF_MPEG_RO_BOT_RE_SURRECT_ED = """Syntax: /trim HH:MM:SS [HH:MM:SS]"""
