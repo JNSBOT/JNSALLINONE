@@ -29,6 +29,9 @@ from helper_funcs.help_Nekmo_ffmpeg import generate_screen_shots
 from helper_funcs.display_progress import progress_for_pyrogram
 
 
+from database.database import *
+
+
 @pyrogram.Client.on_message(pyrogram.Filters.command(["gshoot"]))
 async def generate_screen_shot(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
