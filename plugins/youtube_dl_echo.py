@@ -23,7 +23,6 @@ else:
 # the Strings used for this "thing"
 from translation import Translation
 
-from database.database import *
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
