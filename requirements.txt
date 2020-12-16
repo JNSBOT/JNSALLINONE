@@ -10,3 +10,6 @@ requests
 tgcrypto
 #YouTube-dl
 git+git://github.com/ytdl-org/youtube-dl
+sqlalchemy
+psycopg2-binary
+feedparser
