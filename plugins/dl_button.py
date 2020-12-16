@@ -35,7 +35,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
-from database.database import *
+#from database.database import *
 
 async def ddl_call_back(bot, update):
     logger.info(update)
