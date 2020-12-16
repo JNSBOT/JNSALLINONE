@@ -36,11 +36,18 @@ URL | filename | username | password"""
 Telegram ID: <code>{}</code>
 Plan name: Free User
 Expires on: 31/12/2030"""
-    HELP_USER = """Hai am URL Uploader bot..
+    HELP_USER = """Hai Turbo Renamer and Uploader Bot
     
-1. Send url (Link|New Name with Extension).
-2. Send Custom Thumbnail (Optional).
-3. Select the button.
+1.🔹 <b>Send me any Telegram File.</b> \n
+2.🔹 <b>Reply to that message with /rename New file name.extnsion</b> \n
+3.🔹 <b>Reply to that message with /rename_video New file name.extnsion</b> \n
+4.🔹 <b>Reply to that message with /gshoot  Get Screeshoots</b> \n
+5.🔹 <b> Send A Photo to make it as permanent Thumbnail</b> \n
+6.🔹 <b> I Can Also Convert Files Into Video through /c2v Command </b>   \n \n <b>Made With Love By: @SerialCoIn</b>
+7.🔹 <b> I Can Also Convert Files Into Audio through /c2a Command </b>   \n \n <b>Made With Love By: @SerialCoIn</b>
+8.🔹 Send url (Link|New Name with Extension).
+9.🔹 Send Custom Thumbnail (Optional).
+10.🔹 Select the button.
    SVideo - Give File as video with Screenshots
    DFile  - Give File with Screenshots
    Video  - Give File as video without Screenshots
@@ -51,8 +58,7 @@ Expires on: 31/12/2030"""
 --------
 Send /me to know current plan details
 
-Support Group : @SerialCoIng
-© @SerialCoIn"""
+Support Group : @SerialCoIng"""
     REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
     REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert"
     REPLY_TO_DOC_FOR_SCSS = "Reply to a Telegram media to get screenshots"
