@@ -27,7 +27,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from helper_funcs.chat_base import TRChatBase
 
-from database.database import *
+import database.database as sql
 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["generatecustomthumbnail"]))
