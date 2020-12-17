@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.DEBUG,
 logger = logging.getLogger(__name__)
 
 import os
-import sqlite3
+#import sqlite3
 
 from pyrogram import (
     Client,
