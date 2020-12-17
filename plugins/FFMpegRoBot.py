@@ -30,7 +30,7 @@ from helper_funcs.help_Nekmo_ffmpeg import take_screen_shot, cult_small_video
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 
-from database.database import *
+#from database.database import *
 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["ffmpegrobot"]))
