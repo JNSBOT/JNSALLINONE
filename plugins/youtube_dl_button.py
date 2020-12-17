@@ -34,9 +34,6 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
-#from database.database import *
-
-
 from helper_funcs.help_Nekmo_ffmpeg import generate_screen_shots
 
 
@@ -151,9 +148,6 @@ async def youtube_dl_call_back(bot, update):
         command_to_exec.append(youtube_dl_password)
     command_to_exec.append("--no-warnings")
     # command_to_exec.append("--quiet")
-    if "hotstar" in youtube_dl_url:
-        command_to_exec.append("--geo-bypass-country")
-        command_to_exec.append("IN")
     logger.info(command_to_exec)
     start = datetime.now()
     process = await asyncio.create_subprocess_exec(
@@ -203,7 +197,7 @@ async def youtube_dl_call_back(bot, update):
                 is_w_f,
                 Config.DEF_WATER_MARK_FILE,
                 300,
-                1
+                9
             )
             logger.info(images)
             await bot.edit_message_text(
@@ -366,3 +360,5 @@ async def youtube_dl_call_back(bot, update):
                 message_id=update.message.message_id,
                 disable_web_page_preview=True
             )
+
+            
