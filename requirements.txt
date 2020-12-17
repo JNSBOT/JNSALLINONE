@@ -7,9 +7,6 @@ numpy
 Pillow
 https://github.com/pyrogram/pyrogram/archive/asyncio.zip
 requests
-#tgcrypto
+tgcrypto
 #YouTube-dl
 git+git://github.com/ytdl-org/youtube-dl
-sqlalchemy
-psycopg2-binary
-feedparser
