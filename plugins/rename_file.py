@@ -115,7 +115,7 @@ async def rename_doc(bot, update):
                 chat_id=update.chat.id,
                 document=new_file_name,
                 thumb=thumb_image_path,
-                caption=f"<b>{file_name} \n\nShare and Support\n\n@SerialCoIn</b>",
+                caption=f"<b>{file_name}</b>",
                 # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
