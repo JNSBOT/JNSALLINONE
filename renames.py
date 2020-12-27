@@ -24,7 +24,7 @@ logging.basicConfig(level=logging.WARNING)
 client = TelegramClient('anfghohn', int(os.environ.get("APP_ID" )), os.environ.get("API_HASH")).start(bot_token= os.environ.get("TG_BOT_TOKEN"))
 @client.on(events.NewMessage(pattern='/start'))
 async def handler(event):
-@client.on(events.NewMessage(pattern='(?i)/rename'))
+@client.on(events.NewMessage(pattern='(?i)/renames'))
 async def handler(event):
     chat = await event.get_chat()
     print(chat)
