@@ -86,10 +86,7 @@ async def convert_to_video(bot, update):
             if not os.path.exists(thumb_image_path):
                 thumb_image_path = await take_screen_shot(
                     the_real_download_location,
-                    os.path.dirname(the_real_download_location),
-                    random.randint(
-                        0,
-                        duration - 1
+                    os.path.dirname(the_real_download_location), 1
                     )
                 )
             logger.info(thumb_image_path)
