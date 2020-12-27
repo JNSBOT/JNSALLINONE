@@ -111,7 +111,7 @@ async def rename_video(bot, update):
                 if metadata.has("width"):
                     width = metadata.get("width")
                 if metadata.has("height"):
-                    height = metadata.get("height") ki
+                    height = metadata.get("height")
                 # resize image
                 # ref: https://t.me/PyrogramChat/44663
                 # https://stackoverflow.com/a/21669827/4723940
