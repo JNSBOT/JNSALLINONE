@@ -10,3 +10,5 @@ requests
 tgcrypto
 #YouTube-dl
 git+git://github.com/ytdl-org/youtube-dl
+requests==2.24.0
+telethon
