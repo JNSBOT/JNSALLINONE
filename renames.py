@@ -33,7 +33,7 @@ logging.basicConfig(level=logging.WARNING)
 
 # import request
 
-client = TelegramClient('anfghvygggghbohn',os.getenv("a"),os.getenv("b")).start(bot_token=os.getenv("c"))
+client = TelegramClient('anfghvygggghbohn',os.getenv("APP_ID"),os.getenv("API_HASH")).start(bot_token=os.getenv("TG_BOT_TOKEN"))
    
    
    
