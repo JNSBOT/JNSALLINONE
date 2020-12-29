@@ -1,8 +1,7 @@
 from telethon import TelegramClient, events, Button
     #import requests
 #from bs4 import BeautifulSoup as BS
-import cryptg
-import asyncio
+import tgcryto
 import time
 
 import subprocess
