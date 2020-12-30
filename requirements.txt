@@ -6,9 +6,10 @@ hachoir
 numpy
 Pillow
 https://github.com/pyrogram/pyrogram/archive/asyncio.zip
-git+https://github.com/python/asyncio/
+#git+https://github.com/python/asyncio/
 tgcrypto
 #YouTube-dl
 git+git://github.com/ytdl-org/youtube-dl
 requests==2.24.0
 telethon
+git+git://github.com/pyrogram/pyrogram
