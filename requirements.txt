@@ -5,10 +5,9 @@ git+git://github.com/google/chatbase-python.git
 hachoir
 numpy
 Pillow
-
 tgcrypto
 #YouTube-dl
 git+git://github.com/ytdl-org/youtube-dl
 requests==2.24.0
 telethon
-git+https://github.com/pyrogram/pyrogram
+https://github.com/prgofficial/pyrogram/archive/asyncio.zip
