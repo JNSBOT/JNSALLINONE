@@ -10,6 +10,9 @@ logger = logging.getLogger(__name__)
 
 import os
 import time
+from pyrogram import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel
+
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
@@ -44,12 +47,31 @@ async def rename_doc(bot, update):
         )
         return
     TRChatBase(update.from_user.id, update.text, "rename")
+    update_channel = Config.UPDATE_CHANNEL
+    if update_channel:
+        try:
+            user = await bot.get_chat_member(update_channel, update.chat.id)
+            if user.status == "kicked":
+               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D 🤣🤣🤣**")
+               return
+        except UserNotParticipant:
+            #await update.reply_text(f"Join @{update_channel} To Use Me")
+            await update.reply_text(
+                text="**Join My Updates Channel to use ME 😎 🤭**",
+                reply_markup=InlineKeyboardMarkup([
+                    [ InlineKeyboardButton(text="Join My Updates Channel", url=f"https://t.me/{update_channel}")]
+              ])
+            )
+            return
+        except Exception:
+            await update.reply_text("Something Wrong. Contact my Support Group")
+            return
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
-        if len(file_name) > 512:
+        if len(file_name) > 1024:
             await update.reply_text(
                 Translation.IFLONG_FILE_NAME.format(
-                    alimit="512",
+                    alimit="1024",
                     num=len(file_name)
                 )
             )
