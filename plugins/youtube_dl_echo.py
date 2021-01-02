@@ -8,7 +8,7 @@ import requests
 
 #from headers import headers
 
-import urls
+#import urls
 
 #import os
 logging.basicConfig(level=logging.DEBUG,
