@@ -20,7 +20,7 @@ else:
 from translation import Translation
 #from translation1 import Translation
 
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ForceReply
+from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton, ForceReply
 
 # the Telegram trackings
 from chatbase import Message
