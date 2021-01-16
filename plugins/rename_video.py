@@ -33,7 +33,7 @@ from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
 #from database.database import *
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ForceReply
+from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton, ForceReply
 
 async def force_name(bot, message):
 
