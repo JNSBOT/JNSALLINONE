@@ -52,47 +52,15 @@ async def cus_name(bot, message):
     else:
         print('No media present')
 
-    
-async def rename_video(bot, message):
-    
-    mssg = await bot.get_messages(
-        message.chat.id,
-        message.reply_to_message.message_id
-    )    
-
-    media = mssg.reply_to_message
-
-    
-    if media.empty:
-        await message.reply_text('Why did you delete that 😕', True)
-        return
-        
-    filetype = media.document or media.video or media.audio or media.voice or media.video_note
-    try:
-        actualname = filetype.file_name
-        splitit = actualname.split(".")
-        extension = (splitit[-1])
-    except:
-        extension = "mkv"
-
-    await bot.delete_messages(
-        chat_id=message.chat.id,
-        message_ids=message.reply_to_message.message_id,
-        revoke=True
-    )
-    
-    if message.from_user.id not in Config.BANNED_USERS:
-        file_name = message.text
-
 #@pyrogram.Client.on_message(pyrogram.Filters.command(["rename_video"]))
-#async def rename_video(bot, update):
-    #if update.from_user.id in Config.BANNED_USERS:
-        #await bot.delete_messages(
-            #chat_id=update.chat.id,
-            #message_ids=update.message_id,
-            #revoke=True
-        #)
-        #return
+async def rename_video(bot, update):
+    if update.from_user.id in Config.BANNED_USERS:
+        await bot.delete_messages(
+            chat_id=update.chat.id,
+            message_ids=update.message_id,
+            revoke=True
+        )
+        return
     #TRChatBase(update.from_user.id, update.text, "rename_video")
     #if (" " in update.text) and (update.reply_to_message is not None):
         #cmd, file_name = update.text.split(" ", 1)
