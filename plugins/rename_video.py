@@ -45,13 +45,6 @@ async def force_name(bot, message):
     )
 
 @Client.on_message(Filters.private & Filters.reply & Filters.text)
-async def cus_name(bot, message):
-    
-    if (message.reply_to_message.reply_markup) and isinstance(message.reply_to_message.reply_markup, ForceReply):
-        asyncio.create_task(rename_video(bot, message))     
-    else:
-        print('No media present')
-
 #@pyrogram.Client.on_message(pyrogram.Filters.command(["rename_video"]))
 async def rename_video(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
@@ -61,17 +54,17 @@ async def rename_video(bot, update):
             revoke=True
         )
         return
-    #TRChatBase(update.from_user.id, update.text, "rename_video")
-    #if (" " in update.text) and (update.reply_to_message is not None):
-        #cmd, file_name = update.text.split(" ", 1)
-        #if len(file_name) > 512:
-            #await update.reply_text(
-                #Translation.IFLONG_FILE_NAME.format(
-                    #alimit="512",
-                    #num=len(file_name)
-                #)
-            #)
-            #return
+    TRChatBase(update.from_user.id, update.text, "rename_video")
+    if (" " in update.text) and (update.reply_to_message is not None):
+        cmd, file_name = update.text.split(" ", 1)
+        if len(file_name) > 512:
+            await update.reply_text(
+                Translation.IFLONG_FILE_NAME.format(
+                    alimit="512",
+                    num=len(file_name)
+                )
+            )
+            return
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
         b = await bot.send_message(
