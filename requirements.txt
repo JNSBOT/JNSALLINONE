@@ -10,4 +10,5 @@ tgcrypto
 git+git://github.com/ytdl-org/youtube-dl
 requests==2.24.0
 telethon
-https://github.com/prgofficial/pyrogram/archive/asyncio.zip
+#https://github.com/prgofficial/pyrogram/archive/asyncio.zip
+pyrogram==1.0.7
