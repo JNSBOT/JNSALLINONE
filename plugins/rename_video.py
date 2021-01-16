@@ -35,17 +35,8 @@ from PIL import Image
 #from database.database import *
 from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton, ForceReply
 
-async def force_name(bot, message):
-
-    await bot.send_message(
-        message.reply_to_message.from_user.id,
-        "Enter new name for media\n\nNote : Extension not required",
-        reply_to_message_id=message.reply_to_message.message_id,
-        reply_markup=ForceReply(True)
-    )
-
-@Client.on_message(Filters.private & Filters.reply & Filters.text)
-#@pyrogram.Client.on_message(pyrogram.Filters.command(["rename_video"]))
+#@Client.on_message(Filters.private & Filters.reply & Filters.text)
+@pyrogram.Client.on_message(pyrogram.Filters.command(["rename_video"]))
 async def rename_video(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
