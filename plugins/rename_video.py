@@ -44,16 +44,16 @@ async def force_name(bot, message):
         reply_markup=ForceReply(True)
     )
 
-@Client.on_message(filters.private & filters.reply & filters.text)
+@Client.on_message(Filters.private & Filters.reply & Filters.text)
 async def cus_name(bot, message):
     
     if (message.reply_to_message.reply_markup) and isinstance(message.reply_to_message.reply_markup, ForceReply):
-        asyncio.create_task(rename_doc(bot, message))     
+        asyncio.create_task(rename_video(bot, message))     
     else:
         print('No media present')
 
     
-async def rename_doc(bot, message):
+async def rename_video(bot, message):
     
     mssg = await bot.get_messages(
         message.chat.id,
