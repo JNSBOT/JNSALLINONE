@@ -40,6 +40,7 @@
     "AUTH_USERS": {
       "description": "allow only pre-defined users to use this bot",
       "value": "880087645"
+      "required": false
     },
     "UPDATE_CHANNEL": {
       "description": "For Force Subscribe. Paste your Update channel USERNAME (without @)..",
