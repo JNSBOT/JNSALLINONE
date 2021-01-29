@@ -6,7 +6,7 @@
 import logging
 import requests
 
-from headers import headers
+#from headers import headers
 
 import urls
 
