@@ -1,12 +1,11 @@
 class Translation(object):
-    START_TEXT = """Hello {} ,
-This is a multi purpose Bot 🎊🎉
-<b>Use As rename bot \n Use as convert Bot \n Ise as URL Uploader Bot \ Use As screenshot Bot</b>
+    START_TEXT = """<b>Hello {}  🙋🏻‍♀️ </b>,
+<b>This is a multi purpose Bot 🎊🎉 </b>\n
+<b>Use as rename bot \n\n Use as convert Bot \n\n Use as URL Uploader Bot \n\n Use as screenshot Bot \n\n Use as trimmer bot \n\n Use For unzip file </b>
 
 /helps for more details..
-
 Support Group : @jns_fc_bots
-© @jns_bots"""
+@jns_bots"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "<b>👉 Create own Clone Bot.. </b>  /helps for Details"
@@ -57,7 +56,7 @@ Expires on: 31/12/2030"""
     REPLY_TO_DOC_FOR_SCSS = "Reply to a Telegram media to get screenshots"
     MAX_TG_SPLIT_FILE_SIZE = "Split Files"
     REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to /rename with custom thumbnail support"
-    AFTER_GET_DL_LINK = "Direct Link <a href='{}'>Generated</a> valid for {} days.\n© @AnyDLBot"
+    AFTER_GET_DL_LINK = "Direct Link <a href='{}'>Generated</a> valid for {} days.\n"
     FF_MPEG_RO_BOT_RE_SURRECT_ED = """Syntax: /trim HH:MM:SS [HH:MM:SS]"""
     FF_MPEG_RO_BOT_STEP_TWO_TO_ONE = "First send /downloadmedia to any media so that it can be downloaded to my local. \nSend /storageinfo to know the media, that is currently downloaded."
     FF_MPEG_RO_BOT_STOR_AGE_INFO = "Video Duration: {}\nSend /clearffmpegmedia to delete this media, from my storage.\nSend /trim HH:MM:SS [HH:MM:SS] to cu[l]t a small photo / video, from the above media."
