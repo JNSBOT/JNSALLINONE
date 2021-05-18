@@ -1,7 +1,7 @@
 class Translation(object):
     START_TEXT = """<b>Hello {}  🙋🏻‍♀️ </b>,
 <b>This is a multi purpose Bot 🎊🎉 </b>\n
-<b>Use as rename bot \n\n Use as convert Bot \n\n Use as URL Uploader Bot \n\n Use as screenshot Bot \n\n Use as trimmer bot \n\n Use For unzip file </b>
+<b>Use as rename bot 💥\n\n Use as convert Bot 💥 \n\n Use as URL Uploader Bot 💥 \n\n Use as screenshot Bot 💥 \n\n Use as trimmer bot 💥 \n\n Use For unzip file 💥 </b>
 
 /helps for more details..
 Support Group : @jns_fc_bots
