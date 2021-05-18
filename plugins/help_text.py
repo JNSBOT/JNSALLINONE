@@ -68,7 +68,7 @@ async def start(bot, update):
         reply_markup=InlineKeyboardMarkup(
         [
           [
-          InlineKeyboardButton('JNS BOTS', url=https://t.me/JNS_BOTS)
+          InlineKeyboardButton('JNS BOTS', url='https://t.me/JNS_BOTS')
           ]
         ]
        )
