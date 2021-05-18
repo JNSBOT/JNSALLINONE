@@ -68,7 +68,7 @@ async def start(bot, update):
         reply_markup=InlineKeyboardMarkup(
         [
           [
-          InlineKeyboardButton('Turbo Renamer 🤫', url=myfather)
+          InlineKeyboardButton('JNS BOTS', url=https://t.me/JNS_BOTS)
           ]
         ]
        )
@@ -93,7 +93,7 @@ async def donate(bot, update):
              reply_markup=InlineKeyboardMarkup(
              [
                [
-                 InlineKeyboardButton('Join 💰', url='https://t.me/SerialCoIn')
+                 InlineKeyboardButton('Join 💰', url='https://t.me/Jintons')
                ]
              ]
            )
